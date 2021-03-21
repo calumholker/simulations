@@ -88,6 +88,7 @@ if __name__ == "__main__":
     fig = plt.figure(figsize=(4,5), dpi=80)
     grid = plt.GridSpec(3, 1, wspace=0.0, hspace=0.3)
     ax1 = plt.subplot(grid[0:2,0])
+    ax1.set_facecolor('white')
     ax2 = plt.subplot(grid[2,0])
 
     for i in range(Nt):
@@ -110,7 +111,7 @@ if __name__ == "__main__":
             xx = pos_save[:,0,max(i-50,0):i+1]
             yy = pos_save[:,1,max(i-50,0):i+1]
             plt.scatter(xx,yy,s=1,color=[.7,.7,1])
-            plt.scatter(pos[:,0],pos[:,1],s=10,color='darkblue')
+            plt.scatter(pos[:,0],pos[:,1],s=10,color='navy')
             ax1.set(xlim=(-2, 2), ylim=(-2, 2))
             ax1.set_aspect('equal', 'box')
             ax1.set_xticks([-2,-1,0,1,2])
